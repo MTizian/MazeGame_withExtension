@@ -37,8 +37,8 @@
             this.lbl_Highscore_int = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Text = new System.Windows.Forms.Label();
             this.lbl_CurrentRoom = new System.Windows.Forms.Label();
+            this.lbl_Text = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -164,16 +164,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(477, 91);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
-            // lbl_Text
-            // 
-            this.lbl_Text.AutoSize = true;
-            this.lbl_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Text.Location = new System.Drawing.Point(3, 0);
-            this.lbl_Text.Name = "lbl_Text";
-            this.lbl_Text.Size = new System.Drawing.Size(136, 17);
-            this.lbl_Text.TabIndex = 6;
-            this.lbl_Text.Text = "You are currently in:";
-            // 
             // lbl_CurrentRoom
             // 
             this.lbl_CurrentRoom.AutoSize = true;
@@ -184,12 +174,22 @@
             this.lbl_CurrentRoom.TabIndex = 7;
             this.lbl_CurrentRoom.Text = "XXXXXXXXXXXXXX";
             // 
+            // lbl_Text
+            // 
+            this.lbl_Text.AutoSize = true;
+            this.lbl_Text.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Text.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Text.Name = "lbl_Text";
+            this.lbl_Text.Size = new System.Drawing.Size(136, 17);
+            this.lbl_Text.TabIndex = 6;
+            this.lbl_Text.Text = "You are currently in:";
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.48905F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.51095F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label4, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.Personal_Items_Box, 0, 1);
@@ -219,7 +219,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(324, 0);
+            this.label4.Location = new System.Drawing.Point(323, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 17);
             this.label4.TabIndex = 9;
@@ -232,7 +232,7 @@
             this.Personal_Items_Box.ItemHeight = 16;
             this.Personal_Items_Box.Location = new System.Drawing.Point(3, 28);
             this.Personal_Items_Box.Name = "Personal_Items_Box";
-            this.Personal_Items_Box.Size = new System.Drawing.Size(185, 164);
+            this.Personal_Items_Box.Size = new System.Drawing.Size(184, 164);
             this.Personal_Items_Box.TabIndex = 10;
             // 
             // Items_In_Room
@@ -240,7 +240,7 @@
             this.Items_In_Room.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Items_In_Room.FormattingEnabled = true;
             this.Items_In_Room.ItemHeight = 16;
-            this.Items_In_Room.Location = new System.Drawing.Point(324, 28);
+            this.Items_In_Room.Location = new System.Drawing.Point(323, 28);
             this.Items_In_Room.Name = "Items_In_Room";
             this.Items_In_Room.Size = new System.Drawing.Size(149, 164);
             this.Items_In_Room.TabIndex = 11;
@@ -250,16 +250,17 @@
             this.Button_UseItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Button_UseItem.Location = new System.Drawing.Point(3, 210);
             this.Button_UseItem.Name = "Button_UseItem";
-            this.Button_UseItem.Size = new System.Drawing.Size(185, 45);
+            this.Button_UseItem.Size = new System.Drawing.Size(184, 45);
             this.Button_UseItem.TabIndex = 12;
             this.Button_UseItem.Text = "Use";
             this.Button_UseItem.UseVisualStyleBackColor = true;
+            this.Button_UseItem.Click += new System.EventHandler(this.Button_UseItem_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.Button_PickUpItem);
             this.flowLayoutPanel1.Controls.Add(this.Button_DropItem);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(194, 28);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(193, 28);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(124, 176);
             this.flowLayoutPanel1.TabIndex = 13;
@@ -273,6 +274,7 @@
             this.Button_PickUpItem.TabIndex = 13;
             this.Button_PickUpItem.Text = "< Pick Up";
             this.Button_PickUpItem.UseVisualStyleBackColor = true;
+            this.Button_PickUpItem.Click += new System.EventHandler(this.Button_PickUpItem_Click);
             // 
             // Button_DropItem
             // 
@@ -283,6 +285,7 @@
             this.Button_DropItem.TabIndex = 14;
             this.Button_DropItem.Text = "Drop >";
             this.Button_DropItem.UseVisualStyleBackColor = true;
+            this.Button_DropItem.Click += new System.EventHandler(this.Button_DropItem_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -312,6 +315,7 @@
             this.Button_MoveNorth.TabIndex = 15;
             this.Button_MoveNorth.Text = "North";
             this.Button_MoveNorth.UseVisualStyleBackColor = true;
+            this.Button_MoveNorth.Click += new System.EventHandler(this.Button_MoveNorth_Click);
             // 
             // Button_MoveWest
             // 
@@ -322,6 +326,7 @@
             this.Button_MoveWest.TabIndex = 16;
             this.Button_MoveWest.Text = "West";
             this.Button_MoveWest.UseVisualStyleBackColor = true;
+            this.Button_MoveWest.Click += new System.EventHandler(this.Button_MoveWest_Click);
             // 
             // Button_MoveEast
             // 
@@ -332,6 +337,7 @@
             this.Button_MoveEast.TabIndex = 17;
             this.Button_MoveEast.Text = "East";
             this.Button_MoveEast.UseVisualStyleBackColor = true;
+            this.Button_MoveEast.Click += new System.EventHandler(this.Button_MoveEast_Click);
             // 
             // Button_MoveSouth
             // 
@@ -342,6 +348,7 @@
             this.Button_MoveSouth.TabIndex = 18;
             this.Button_MoveSouth.Text = "South";
             this.Button_MoveSouth.UseVisualStyleBackColor = true;
+            this.Button_MoveSouth.Click += new System.EventHandler(this.Button_MoveSouth_Click);
             // 
             // MainWindow
             // 
